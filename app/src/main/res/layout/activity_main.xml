@@ -33,6 +33,30 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="Load Test Class"
+            android:onClick="onLoadClass"/>
+
+        <TextView
+            android:id="@+id/tv_load_class"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Class Object" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Get Test Class Modifiers"
+            android:onClick="onLoadClassModifiers"/>
+
+        <TextView
+            android:id="@+id/tv_load_class_modifiers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Class Modifiers" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:text="Reflect User Class"
             android:onClick="onReflectClassUser"/>
 
