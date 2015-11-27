@@ -63,6 +63,18 @@ public class TestClassReflection {
         return 500; // time in milliseconds
     }
 
+    public void chainMethod() {
+        chainMethod1().chainMethod2();
+    }
+
+    public TestClassReflection chainMethod1() {
+        return this;
+    }
+
+    public TestClassReflection chainMethod2() {
+        return this;
+    }
+
     @Override
     public String toString() {
         return "TestClassReflection{" +
