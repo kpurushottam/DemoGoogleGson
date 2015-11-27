@@ -57,13 +57,87 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Reflect User Class"
-            android:onClick="onReflectClassUser"/>
+            android:text="Find Super Class"
+            android:onClick="onFindSuperClass"/>
 
         <TextView
-            android:id="@+id/tv_class_def"
+            android:id="@+id/tv_find_super_class"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Json Object" />
+            android:text="Super Class" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Find Implemented Interfaces"
+            android:onClick="onFindImplementedInterfaces"/>
+
+        <TextView
+            android:id="@+id/tv_find_interfaces"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Implemented Interfaces" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Find Constructors"
+            android:onClick="onFindConstructors"/>
+
+        <TextView
+            android:id="@+id/tv_find_constructors"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Constructors" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Find Paramaterized Constructor"
+            android:onClick="onFindStringParametrizedConstructor"/>
+
+        <TextView
+            android:id="@+id/tv_find_string_param_constructor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="String Paramaterized Constructor" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Find Methods"
+            android:onClick="onFindMethods"/>
+
+        <TextView
+            android:id="@+id/tv_find_methods"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Methods" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Find Fields"
+            android:onClick="onFindFields"/>
+
+        <TextView
+            android:id="@+id/tv_find_fields"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fields" />
+
+
+        <!-- Tutorial LEVEL-2 -->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Instantiate Class"
+            android:onClick="onClassInstantiation"/>
+
+        <TextView
+            android:id="@+id/tv_instantiate_class"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Instantiate Class" />
     </LinearLayout>
 </ScrollView>

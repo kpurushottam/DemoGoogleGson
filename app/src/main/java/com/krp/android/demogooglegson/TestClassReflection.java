@@ -6,6 +6,30 @@ package com.krp.android.demogooglegson;
 public class TestClassReflection {
     public static final String TAG = TestClassReflection.class.getSimpleName();
 
+    public TestClassReflection() {
+        this.loginUsername = "testUsername";
+        this.loginPassword = "testPassword";
+        this.user = new User(loginUsername, loginPassword);
+    }
+
+    protected TestClassReflection(String loginUsername) {
+        this.loginUsername = loginUsername;
+        this.loginPassword = "testPassword";
+        this.user = new User(loginUsername, loginPassword);
+    }
+
+    public TestClassReflection(String loginUsername, String loginPassword) {
+        this.loginUsername = loginUsername;
+        this.loginPassword = loginPassword;
+        this.user = new User(loginUsername, loginPassword);
+    }
+
+    private TestClassReflection(String loginUsername, String loginPassword, String userType) {
+        this.loginUsername = loginUsername;
+        this.loginPassword = loginPassword;
+        this.user = new User(loginUsername, loginPassword, userType);
+    }
+
     private String loginUsername;
     private String loginPassword;
 
@@ -37,5 +61,14 @@ public class TestClassReflection {
 
     private int getSessionTimeOut() {
         return 500; // time in milliseconds
+    }
+
+    @Override
+    public String toString() {
+        return "TestClassReflection{" +
+                "loginUsername='" + loginUsername + '\'' +
+                ", loginPassword='" + loginPassword + '\'' +
+                ", user=" + user +
+                '}';
     }
 }

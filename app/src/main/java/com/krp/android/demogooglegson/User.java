@@ -8,6 +8,18 @@ public class User {
     private String password;
     private String type;
 
+    public User(String username, String password) {
+        this.username = username;
+        this.password = password;
+        this.type = "defaultType";
+    }
+
+    public User(String username, String password, String userType) {
+        this.username = username;
+        this.password = password;
+        this.type = userType;
+    }
+
     public String getUsername() {
         return username;
     }
