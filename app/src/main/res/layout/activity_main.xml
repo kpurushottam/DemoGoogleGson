@@ -139,5 +139,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Instantiate Class" />
+
+
+        <!-- Tutorial LEVEL-3 -->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Class Proxy"
+            android:onClick="onClassProxy"/>
+
+        <TextView
+            android:id="@+id/tv_class_proxy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Proxy Class" />
     </LinearLayout>
 </ScrollView>

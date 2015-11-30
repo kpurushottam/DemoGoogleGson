@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
+import com.krp.android.demogooglegson.reflection.proxy.ISum;
+import com.krp.android.demogooglegson.reflection.proxy.SumFactory;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
@@ -21,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView tvFindConstructors, tvFindStringParametrizedConstructor;
     private TextView tvFindMethods, tvFindFields;
     private TextView tvInstanceClass;
+    private TextView tvClassProxy;
 
     private String jsonString = "{ \"username\":\"test\",\"password\":\"123\", \"type\":\"Student\" }";
 
@@ -43,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         tvFindMethods = (TextView) findViewById(R.id.tv_find_methods);
         tvFindFields = (TextView) findViewById(R.id.tv_find_fields);
         tvInstanceClass = (TextView) findViewById(R.id.tv_instantiate_class);
+        tvClassProxy = (TextView) findViewById(R.id.tv_class_proxy);
 
         tvJsonString.setText(jsonString);
     }
@@ -220,5 +224,22 @@ public class MainActivity extends AppCompatActivity {
             }
             tvInstanceClass.setText(builder.toString());
         }
+    }
+
+    public void onClassProxy(View v) {
+        builder = new StringBuilder();
+
+        ISum s = new SumFactory().createSum(null, new Integer(2));
+        builder.append("Returns (null+2): ");
+        int sum = s.sum();
+        builder.append(sum);
+        builder.append("\n");
+
+        s = new SumFactory().createSum(new Integer(3), new Integer(2));
+        builder.append("Returns (3+2): ");
+        sum = s.sum();
+        builder.append(sum);
+
+        tvClassProxy.setText(builder.toString());
     }
 }
